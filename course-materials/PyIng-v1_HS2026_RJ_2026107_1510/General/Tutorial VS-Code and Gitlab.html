@@ -1,0 +1,384 @@
+<!doctype html>
+<html>
+<head>
+    <title>Tutorial VS-Code and Gitlab</title>
+    <meta charset="utf-8">
+    
+</head>
+<body>
+<a name="top"></a><h1>Tutorial VS-Code and Gitlab</h1><p class="book_summary"><p>In this step by step tutorial you will learn how to set up and use your Gitlab environment.<br>Note: We recommend using the remote machines</p></p><div class="book_toc_numbered"><a name="toc"></a><h2 class="text-center pb-5">Inhaltsverzeichnis</h2><ul><li><a title="1. Set up Visual Studio Code" class="fw-bold text-decoration-none" href="#ch8749">1. Set up Visual Studio Code</a></li><li><a title="2. Install Python" class="fw-bold text-decoration-none" href="#ch8757">2. Install Python</a></li><li><a title="3. Install Git" class="fw-bold text-decoration-none" href="#ch8750">3. Install Git</a></li><li><a title="4. Add Extensions to VS-Code" class="fw-bold text-decoration-none" href="#ch8754">4. Add Extensions to VS-Code</a></li><li><a title="5. Create a new Repository" class="fw-bold text-decoration-none" href="#ch8751">5. Create a new Repository</a></li><li><a title="6. Clone the repository to your VS-Code" class="fw-bold text-decoration-none" href="#ch8752">6. Clone the repository to your VS-Code</a></li><li><a title="7. Generate Personal Access Token to Login in Gitlab" class="fw-bold text-decoration-none" href="#ch8755">7. Generate Personal Access Token to Login in Gitlab</a></li><li><a title="8. Sync Data to your repository" class="fw-bold text-decoration-none" href="#ch8753">8. Sync Data to your repository</a></li><li><a title="9. Create a virtual enviorment" class="fw-bold text-decoration-none" href="#ch8758">9. Create a virtual enviorment</a></li><li><a title="10. For Mac users only" class="fw-bold text-decoration-none" href="#ch8756">10. For Mac users only</a></li><li><a title="11. GIT Ignore" class="fw-bold text-decoration-none" href="#ch8759">11. GIT Ignore</a></li></ul></div><div class="book_chapter"><a name="ch8749"></a><h2>1. Set up Visual Studio Code</h2><p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language: EN-US;"> VS-Code is already pre-installed on our remote computers, so this step is not necessary there</span></p>
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language: EN-US;">Follow the instructions to install it on your personal computer.</span></p>
+<p class="MsoNormal"><strong><span lang="EN-US" style="mso-ansi-language: EN-US;">1) Download the installation file:</span></strong><span lang="EN-US" style="mso-ansi-language: EN-US;"> </span><a href="https://code.visualstudio.com/download"><span lang="EN-US" style="mso-ansi-language: EN-US;">https://code.visualstudio.com/download#</span></a></p>
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language: EN-US;">Choose x64 for Windows and Apple Silicon for M-CPU's or Intel for Intel Chips</span></p>
+<p class="MsoNormal"><!-- [if mso & !supportInlineShapes & supportFields]><span
+style='mso-element:field-begin;mso-field-lock:yes'></span><span
+style='mso-spacerun:yes'> </span>SHAPE <span
+style='mso-spacerun:yes'> </span>\* MERGEFORMAT <span style='mso-element:field-separator'></span><![endif]--><!-- [if gte vml 1]><v:rect
+ id="Rechteck_x0020_8" o:spid="_x0000_s1028" style='width:600pt;height:258pt;
+ visibility:visible;mso-wrap-style:square;mso-left-percent:-10001;
+ mso-top-percent:-10001;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:char;mso-position-vertical:absolute;
+ mso-position-vertical-relative:line;mso-left-percent:-10001;mso-top-percent:-10001;
+ v-text-anchor:top' o:gfxdata="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
+wM9tBD/SW8FKXSsEg3E5gNZ8qP2UubrwrnHmh/T0ImM6EQBjxWwnMDcvPd3Uui7cnt5dFmqX8LSj
+hHFKFlauEsYypsGTEfwIzqNTUy+jxlV93Zy61FFPm8KsB/E9VWN17X1aXNfXwDebG1hiZwqWoFM4
+4zU4dAEa4LQVjGBmDI9xCsEj9U8uzEK4bRkokZ3466SWVEi1jWWUWdxkncw/MVVEIEbjVqD3X/qB
+JSaJZMo14eh+rMrV9IH72JQDr7teJqMRGSjb7xZFWzp7hRSfJQvvV8N+fbDm5GNwdzcanqI+G4sH
+GEJsZbWqvTukEq4OqpmrhxTuwspMNo2/mcqUZ3/7MsrEUEbHLI1wXlLsbJ7BTUEp1TFvpQ2st3zP
+YFDLJHkl7Ie6wtpGdcppWbsyHRaW3YuZtOWsrDktmk5a0WXTn8acFYo6MGPL61V5S6vCxJDU7BKf
+5e7ZnNsskt1Mo1CWCTB4ab/r1X5Ltelijmpa4/k8rJN2TnWLR7HBC1S7TJWw0n6jEDtjt7JIeJcD
+4rVKP/DNRi2QRkVjaSztu9fexynqh9VWAHfLMBt8Ck9wOx0AraZpNU2DJ7hyhnKR3RO3gvyhoMD3
+jFJilgvKcoGpF5R6QVkpKCsFpVFQGgEyF6pwia/vUgNU3JdCDcvvV/Pmwr383/gXAAD//wMAUEsD
+BBQABgAIAAAAIQCcZkZBuwAAACQBAAAqAAAAY2xpcGJvYXJkL2RyYXdpbmdzL19yZWxzL2RyYXdp
+bmcxLnhtbC5yZWxzhI/NCsIwEITvgu8Q9m7SehCRJr2I0KvUBwjJNi02PyRR7Nsb6EVB8LIws+w3
+s037sjN5YkyTdxxqWgFBp7yenOFw6y+7I5CUpdNy9g45LJigFdtNc8VZ5nKUxikkUigucRhzDifG
+khrRykR9QFc2g49W5iKjYUGquzTI9lV1YPGTAeKLSTrNIXa6BtIvoST/Z/thmBSevXpYdPlHBMul
+FxagjAYzB0pXZ501LV2BiYZ9/SbeAAAA//8DAFBLAQItABQABgAIAAAAIQC75UiUBQEAAB4CAAAT
+AAAAAAAAAAAAAAAAAAAAAABbQ29udGVudF9UeXBlc10ueG1sUEsBAi0AFAAGAAgAAAAhAK0wP/HB
+AAAAMgEAAAsAAAAAAAAAAAAAAAAANgEAAF9yZWxzLy5yZWxzUEsBAi0AFAAGAAgAAAAhALWr+8T7
+AgAArgYAAB8AAAAAAAAAAAAAAAAAIAIAAGNsaXBib2FyZC9kcmF3aW5ncy9kcmF3aW5nMS54bWxQ
+SwECLQAUAAYACAAAACEAe5Te7R4HAABIIAAAGgAAAAAAAAAAAAAAAABYBQAAY2xpcGJvYXJkL3Ro
+ZW1lL3RoZW1lMS54bWxQSwECLQAUAAYACAAAACEAnGZGQbsAAAAkAQAAKgAAAAAAAAAAAAAAAACu
+DAAAY2xpcGJvYXJkL2RyYXdpbmdzL19yZWxzL2RyYXdpbmcxLnhtbC5yZWxzUEsFBgAAAAAFAAUA
+ZwEAALENAAAAAA==
+" filled="f" stroked="f">
+ <o:lock v:ext="edit" aspectratio="t"/>
+ <w:wrap type="none"/>
+ <w:anchorlock/>
+</v:rect><![endif]--><!-- [if gte vml 1]><v:shapetype id="_x0000_t75"
+ coordsize="21600,21600" o:spt="75" o:preferrelative="t" path="m@4@5l@4@11@9@11@9@5xe"
+ filled="f" stroked="f">
+ <v:stroke joinstyle="miter"/>
+ <v:formulas>
+  <v:f eqn="if lineDrawn pixelLineWidth 0"/>
+  <v:f eqn="sum @0 1 0"/>
+  <v:f eqn="sum 0 0 @1"/>
+  <v:f eqn="prod @2 1 2"/>
+  <v:f eqn="prod @3 21600 pixelWidth"/>
+  <v:f eqn="prod @3 21600 pixelHeight"/>
+  <v:f eqn="sum @0 0 1"/>
+  <v:f eqn="prod @6 1 2"/>
+  <v:f eqn="prod @7 21600 pixelWidth"/>
+  <v:f eqn="sum @8 21600 0"/>
+  <v:f eqn="prod @7 21600 pixelHeight"/>
+  <v:f eqn="sum @10 21600 0"/>
+ </v:formulas>
+ <v:path o:extrusionok="f" gradientshapeok="t" o:connecttype="rect"/>
+ <o:lock v:ext="edit" aspectratio="t"/>
+</v:shapetype><![endif]--><!-- [if mso & !supportInlineShapes & supportFields]><v:shape
+ id="_x0000_i1027" type="#_x0000_t75" style='width:600pt;height:258pt'>
+ <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+</v:shape><span style='mso-element:field-end'></span><![endif]--></p>
+<p class="MsoNormal"><strong> <img class="img-fluid" src="data/15-09-2025_08-55-41.png" alt="Installer" width="800" height="344"></strong></p>
+<p class="MsoNormal"><strong>2) Execute installation file</strong></p>
+<p class="MsoNormal"><strong><img class="img-fluid" role="presentation" src="data/image%20%287%29.png" alt="" width="700" height="574"></strong></p>
+<p class="MsoNormal"><!-- [if mso & !supportInlineShapes & supportFields]><span
+style='mso-element:field-begin;mso-field-lock:yes'></span><span
+style='mso-spacerun:yes'> </span>SHAPE <span
+style='mso-spacerun:yes'> </span>\* MERGEFORMAT <span style='mso-element:field-separator'></span><![endif]--><!-- [if gte vml 1]><v:rect
+ id="Rechteck_x0020_5" o:spid="_x0000_s1027" style='width:322.8pt;height:264.7pt;
+ visibility:visible;mso-wrap-style:square;mso-left-percent:-10001;
+ mso-top-percent:-10001;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:char;mso-position-vertical:absolute;
+ mso-position-vertical-relative:line;mso-left-percent:-10001;mso-top-percent:-10001;
+ v-text-anchor:top' o:gfxdata="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
+r8DPbQQ/0lvBSl0rBINxOYDWfKj9lLm68K5x5of09CJjOhEAY8VsJzA3Lz3d1Lou3J7eXRZql/C0
+o4RxShZWrhLGMqbBkxH8CM6jU1Mvo8ZVfd2cutRRT5vCrAfxPVVjde19WlzX18A3mxtYYmcKlqBT
+OOM1OHQBGuC0FYxgZgyPcQrBI/VPLsxCuG0ZKJGd+OukllRItY1llFncZJ3MPzFVRCBG41ag91/6
+gSUmiWTKNeHofqzK1fSB+9iUA6+7XiajERko2+8WRVs6e4UUnyUL71fDfn2w5uRjcHc3Gp6iPhuL
+BxhCbGW1qr07pBKuDqqZq4cU7sLKTDaNv5nKlGd/+zLKxFBGxyyNcF5S7GyewU1BKdUxb6UNrLd8
+z2BQyyR5JeyHusLaRnXKaVm7Mh0Wlt2LmbTlrKw5LZpOWtFl05/GnBWKOjBjy+tVeUurwsSQ1OwS
+n+Xu2ZzbLJLdTKNQlgkweGm/69V+S7XpYo5qWuP5PKyTdk51i0exwQtUu0yVsNJ+oxA7Y7eySHiX
+A+K1Sj/wzUYtkEZFY2ks7bvX3scp6ofVVgB3yzAbfApPcDsdAK2maTVNgye4coZykd0Tt4L8oaDA
+94xSYpYLynKBqReUekFZKSgrBaVRUBoBMheqcImv71IDVNyXQg3L71fz5sK9/N/4FwAA//8DAFBL
+AwQUAAYACAAAACEAnGZGQbsAAAAkAQAAKgAAAGNsaXBib2FyZC9kcmF3aW5ncy9fcmVscy9kcmF3
+aW5nMS54bWwucmVsc4SPzQrCMBCE74LvEPZu0noQkSa9iNCr1AcIyTYtNj8kUezbG+hFQfCyMLPs
+N7NN+7IzeWJMk3ccaloBQae8npzhcOsvuyOQlKXTcvYOOSyYoBXbTXPFWeZylMYpJFIoLnEYcw4n
+xpIa0cpEfUBXNoOPVuYio2FBqrs0yPZVdWDxkwHii0k6zSF2ugbSL6Ek/2f7YZgUnr16WHT5RwTL
+pRcWoIwGMwdKV2edNS1dgYmGff0m3gAAAP//AwBQSwECLQAUAAYACAAAACEAu+VIlAUBAAAeAgAA
+EwAAAAAAAAAAAAAAAAAAAAAAW0NvbnRlbnRfVHlwZXNdLnhtbFBLAQItABQABgAIAAAAIQCtMD/x
+wQAAADIBAAALAAAAAAAAAAAAAAAAADYBAABfcmVscy8ucmVsc1BLAQItABQABgAIAAAAIQCdEenc
+/AIAAK4GAAAfAAAAAAAAAAAAAAAAACACAABjbGlwYm9hcmQvZHJhd2luZ3MvZHJhd2luZzEueG1s
+UEsBAi0AFAAGAAgAAAAhAHuU3u0eBwAASCAAABoAAAAAAAAAAAAAAAAAWQUAAGNsaXBib2FyZC90
+aGVtZS90aGVtZTEueG1sUEsBAi0AFAAGAAgAAAAhAJxmRkG7AAAAJAEAACoAAAAAAAAAAAAAAAAA
+rwwAAGNsaXBib2FyZC9kcmF3aW5ncy9fcmVscy9kcmF3aW5nMS54bWwucmVsc1BLBQYAAAAABQAF
+AGcBAACyDQAAAAA=
+" filled="f" stroked="f">
+ <o:lock v:ext="edit" aspectratio="t"/>
+ <w:wrap type="none"/>
+ <w:anchorlock/>
+</v:rect><![endif]--><!-- [if mso & !supportInlineShapes & supportFields]><v:shape
+ id="_x0000_i1026" type="#_x0000_t75" style='width:322.8pt;height:264.7pt'>
+ <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+</v:shape><span style='mso-element:field-end'></span><![endif]--></p>
+<p class="MsoNormal"><span lang="EN-US" style="mso-ansi-language: EN-US;">Check the marked boxes and press "Next"</span></p>
+<p class="MsoNormal"><strong><span lang="EN-US" style="mso-ansi-language: EN-US;">3) Finish the installation and start VS Code</span></strong></p>
+<p class="MsoNormal"><strong><span lang="EN-US" style="mso-ansi-language: EN-US;"><img class="img-fluid" role="presentation" src="data/image%20%286%29.png" alt="" width="800" height="600"></span></strong></p>
+<p class="MsoNormal"><!-- [if mso & !supportInlineShapes & supportFields]><span
+style='mso-element:field-begin;mso-field-lock:yes'></span><span
+style='mso-spacerun:yes'> </span>SHAPE <span
+style='mso-spacerun:yes'> </span>\* MERGEFORMAT <span style='mso-element:field-separator'></span><![endif]--><!-- [if gte vml 1]><v:rect
+ id="Rechteck_x0020_4" o:spid="_x0000_s1026" style='width:375pt;height:281.25pt;
+ visibility:visible;mso-wrap-style:square;mso-left-percent:-10001;
+ mso-top-percent:-10001;mso-position-horizontal:absolute;
+ mso-position-horizontal-relative:char;mso-position-vertical:absolute;
+ mso-position-vertical-relative:line;mso-left-percent:-10001;mso-top-percent:-10001;
+ v-text-anchor:top' o:gfxdata="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
+z20EP9JbwUpdKwSDcTmA1nyo/ZS5uvCuceaH9PQiYzoRAGPFbCcwNy893dS6Ltye3l0WapfwtKOE
+cUoWVq4SxjKmwZMR/AjOo1NTL6PGVX3dnLrUUU+bwqwH8T1VY3XtfVpc19fAN5sbWGJnCpagUzjj
+NTh0ARrgtBWMYGYMj3EKwSP1Ty7MQrhtGSiRnfjrpJZUSLWNZZRZ3GSdzD8xVUQgRuNWoPdf+oEl
+JolkyjXh6H6sytX0gfvYlAOvu14moxEZKNvvFkVbOnuFFJ8lC+9Xw359sObkY3B3Nxqeoj4biwcY
+Qmxltaq9O6QSrg6qmauHFO7Cykw2jb+ZypRnf/syysRQRscsjXBeUuxsnsFNQSnVMW+lDay3fM9g
+UMskeSXsh7rC2kZ1ymlZuzIdFpbdi5m05aysOS2aTlrRZdOfxpwVijowY8vrVXlLq8LEkNTsEp/l
+7tmc2yyS3UyjUJYJMHhpv+vVfku16WKOalrj+Tysk3ZOdYtHscELVLtMlbDSfqMQO2O3skh4lwPi
+tUo/8M1GLZBGRWNpLO27197HKeqH1VYAd8swG3wKT3A7HQCtpmk1TYMnuHKGcpHdE7eC/KGgwPeM
+UmKWC8pygakXlHpBWSkoKwWlUVAaATIXqnCJr+9SA1Tcl0INy+9X8+bCvfzf+BcAAP//AwBQSwME
+FAAGAAgAAAAhAJxmRkG7AAAAJAEAACoAAABjbGlwYm9hcmQvZHJhd2luZ3MvX3JlbHMvZHJhd2lu
+ZzEueG1sLnJlbHOEj80KwjAQhO+C7xD2btJ6EJEmvYjQq9QHCMk2LTY/JFHs2xvoRUHwsjCz7Dez
+TfuyM3liTJN3HGpaAUGnvJ6c4XDrL7sjkJSl03L2DjksmKAV201zxVnmcpTGKSRSKC5xGHMOJ8aS
+GtHKRH1AVzaDj1bmIqNhQaq7NMj2VXVg8ZMB4otJOs0hdroG0i+hJP9n+2GYFJ69elh0+UcEy6UX
+FqCMBjMHSldnnTUtXYGJhn39Jt4AAAD//wMAUEsBAi0AFAAGAAgAAAAhALvlSJQFAQAAHgIAABMA
+AAAAAAAAAAAAAAAAAAAAAFtDb250ZW50X1R5cGVzXS54bWxQSwECLQAUAAYACAAAACEArTA/8cEA
+AAAyAQAACwAAAAAAAAAAAAAAAAA2AQAAX3JlbHMvLnJlbHNQSwECLQAUAAYACAAAACEAv3dUofoC
+AACtBgAAHwAAAAAAAAAAAAAAAAAgAgAAY2xpcGJvYXJkL2RyYXdpbmdzL2RyYXdpbmcxLnhtbFBL
+AQItABQABgAIAAAAIQB7lN7tHgcAAEggAAAaAAAAAAAAAAAAAAAAAFcFAABjbGlwYm9hcmQvdGhl
+bWUvdGhlbWUxLnhtbFBLAQItABQABgAIAAAAIQCcZkZBuwAAACQBAAAqAAAAAAAAAAAAAAAAAK0M
+AABjbGlwYm9hcmQvZHJhd2luZ3MvX3JlbHMvZHJhd2luZzEueG1sLnJlbHNQSwUGAAAAAAUABQBn
+AQAAsA0AAAAA
+" filled="f" stroked="f">
+ <o:lock v:ext="edit" aspectratio="t"/>
+ <w:wrap type="none"/>
+ <w:anchorlock/>
+</v:rect><![endif]--><!-- [if mso & !supportInlineShapes & supportFields]><v:shape
+ id="_x0000_i1025" type="#_x0000_t75" style='width:375pt;height:281.25pt'>
+ <v:imagedata croptop="-65520f" cropbottom="65520f"/>
+</v:shape><span style='mso-element:field-end'></span><![endif]--></p>
+<p class="MsoNormal">Mark it as done</p>
+<p class="MsoNormal"><strong> </strong></p>
+<p class="MsoNormal"> </p></div><a href="#toc">&uarr; Anfang</a><div class="book_chapter"><a name="ch8757"></a><h2>2. Install Python</h2><p>Search "Python" in the Microsoft Store</p>
+<p><img class="img-fluid" role="presentation" src="data/15-09-2025_09-51-16.png" alt="" width="464" height="278"></p>
+<p>Download it </p>
+<p><strong>!Important! If this window pops up, check the box "Add python.exe to PATH" </strong></p>
+<p><img class="img-fluid" role="presentation" src="data/image%20%285%29.png" alt="" width="600" height="368"></p>
+<p>Then press install Now</p>
+<p>Also <strong>click "Disable path lenth limit"</strong> in the Setup was successful site</p>
+<p><img class="img-fluid" role="presentation" src="data/image%20%286%29.png" alt="" width="600" height="369"></p></div><a href="#toc">&uarr; Anfang</a><div class="book_chapter"><a name="ch8750"></a><h2>3. Install Git</h2><p><strong>1. Install Git (Not necessary on remote computers)</strong></p>
+<p>Download the installation file from <a href="https://git-scm.com/downloads">https://git-scm.com/downloads</a>.</p>
+<p><img class="img-fluid" role="presentation" src="data/image%20%2822%29.png" alt="" width="700" height="525"></p>
+<p>In the setup make sure you check all the boxes from the picture below</p>
+<p><img class="img-fluid" role="presentation" src="data/image%20%2823%29.png" alt="" width="700" height="579"></p>
+<p><strong>2.  Configure username and user mail</strong></p>
+<p><strong>2.1 open a new command prompt</strong></p>
+<p><img class="img-fluid" role="presentation" src="data/15-09-2025_10-35-49.png" alt="" width="800" height="810"></p>
+<p><strong>2.2 check whether git has been installed correctly</strong></p>
+<p>The command <span style="color: #d72864;"><em>git version</em></span> should return whether and which Git version is installed</p>
+<p><strong><img src="data/image.png"></strong></p>
+<p><strong>2.3 Set username and password</strong></p>
+<p>Set the username with <em><span style="color: #d72864;">git config --global user.name “Firstname.Lastname”</span></em></p>
+<p>The email address with <em><span style="color: #d72864;">git config --global user.email “Firstname.Lastname@ost.ch”</span></em></p>
+<p></p>
+<p><strong><em><span style="color: #d72864;">There is no feedback from the terminal!</span></em></strong></p>
+<p></p></div><a href="#toc">&uarr; Anfang</a><div class="book_chapter"><a name="ch8754"></a><h2>4. Add Extensions to VS-Code</h2><ol>
+<li>Open VS-Code</li>
+<li>Go to Extensions search for "Git Graph" click install</li>
+</ol>
+<p><img src="data/image%20%281%29.png"></p>
+<p>   3. Do the same for the Python and Jupyter extension</p>
+<p><img src="data/image%20%283%29.png" width="386" height="111"></p>
+<p><img src="data/image%20%282%29.png" width="388" height="90"></p></div><a href="#toc">&uarr; Anfang</a><div class="book_chapter"><a name="ch8751"></a><h2>5. Create a new Repository</h2><ol>
+<li>Login to <a href="https://gitlab.ost.ch/">Gitlab ost</a></li>
+</ol>
+<p>      1.1 Login with the OST SSO option</p>
+<p><img src="data/image.png" width="599" height="326"></p>
+<p>1.2Create a blank project</p>
+<p></p>
+<p><img src="data/image%20%282%29.png" width="594" height="269"></p>
+<p>1.3 Setup the repository  and Link the project URL to your own user account</p>
+<p>13.1 Create the project</p>
+<p>Make sure to set the visibility level to "Public"</p>
+<p> <img src="data/image%20%284%29.png" width="781" height="359"></p></div><a href="#toc">&uarr; Anfang</a><div class="book_chapter"><a name="ch8752"></a><h2>6. Clone the repository to your VS-Code</h2><p><span style="font-size: 1rem; text-align: initial;">open the repository in your VS Code environment, click on the "Code" button, then select:</span><span style="font-size: 1rem; text-align: initial;"> "Visual Studio Code (HTTPS)"</span></p>
+<p><img class="img-fluid" src="data/image.png" width="979" height="407"></p>
+<p>Now VS-Code opens automatically, choose any folder (preferably not onedrive synced) and Click "Select as repository destination"<br><br>If no Explorer Window opens just restart VS-Code since Git changes require a restart of the IDE</p>
+<p></p>
+<p><img class="img-fluid" src="data/image%20%281%29.png"></p></div><a href="#toc">&uarr; Anfang</a><div class="book_chapter"><a name="ch8755"></a><h2>7. Generate Personal Access Token to Login in Gitlab</h2><p>To Comit your changes in VS-Code a Personal Token is required.</p>
+<p><strong>The token is required as a prompt for VS code, so it must be saved in a separate text file. </strong></p>
+<p></p>
+<p>To generate a token, go to Preferences</p>
+<p><img src="data/image.png"></p>
+<p>Then Access Tokens</p>
+<p><img src="data/image%20%281%29.png"></p>
+<p>Click on Add new token</p>
+<p>Put the Expiration date to a year from now and give the token the Scope to read and write repository's</p>
+<p><img src="data/image%20%282%29.png"></p>
+<p>You can then copy the Token and use it in VS-Code after you commit. When the login mask appears.</p></div><a href="#toc">&uarr; Anfang</a><div class="book_chapter"><a name="ch8753"></a><h2>8. Sync Data to your repository</h2><p data-pm-slice="1 1 []">You can now manually download content and add it to your repository. Go to Moodle, download Exercise 1, unzip it, and copy the extracted files into your local repository folder. You can use File Explorer or VS Code directly whichever you prefer.</p>
+<p><img class="img-fluid" src="data/image%20%284%29.png"></p>
+<p><img class="img-fluid" src="data/image%20%285%29.png"></p>
+<p data-pm-slice="1 1 []">New files appear in green in VS Code, indicating that Git is not yet tracking them. Open the Source Control panel, stage your changes (big blue Button), and enter a short commit message summarizing what you added or changed.</p>
+<p><img class="img-fluid" src="data/image%20%287%29.png"> (Button to enter Source Control panel)</p>
+<p>write a message that summarizes your changes</p>
+<p><img class="img-fluid" src="data/image%20%286%29.png"></p>
+<p data-pm-slice="1 1 []">Click <strong>Commit</strong> to save your changes locally, then <strong>Sync Changes</strong> to upload them to the remote repository. If a login prompt appears, enter your OST email address and use your access token as the password.</p>
+<p data-pm-slice="1 1 []">Go to your gitlab page the files should now be online</p></div><a href="#toc">&uarr; Anfang</a><div class="book_chapter"><a name="ch8758"></a><h2>9. Create a virtual enviorment</h2><p>For every project we need different libraries and extensions and sometimes even a very specific python version. For that reason we can creat <strong>virtual environments (venv). </strong>It's like a dedicated Python installation that is only valid for this project. You have to do this only once, we use the same repository and venv for all exercises.</p>
+<p>In VS Code start a new terminal </p>
+<p><img class="img-fluid" role="presentation" src="data/image%20%289%29.png" alt="" width="500" height="310"></p>
+<p>Create a new  virtual enviorment</p>
+<p><code>python -m venv .venv</code></p>
+<p>Activate the venv</p>
+<p><code>.venv\Scripts\Activate.ps1</code></p>
+<p>If this fails try: <code>Set-ExecutionPolicy Bypass -Scope Process</code></p>
+<p>Else proceed as usual</p>
+<p>You should see that the venv is activated in the bottom left of the terminal</p>
+<p><img class="img-fluid" role="presentation" src="data/image%20%2813%29.png" alt="" width="500" height="178"></p>
+<p>Update pip </p>
+<p><code>python -m pip install --upgrade pip</code></p>
+<p><code><img class="img-fluid" role="presentation" src="data/image%20%2814%29.png" alt="" width="500" height="79"></code></p>
+<p>Install basic packages</p>
+<p><code>pip install notebook numpy pandas matplotlib</code></p></div><a href="#toc">&uarr; Anfang</a><div class="book_chapter"><a name="ch8756"></a><h2>10. For Mac users only</h2><p>On a Mac, logging into VS Code using a token may not work. Instead, go to your GitLab preferences, navigate to the "Password" section, and reset your password by selecting the "I forgot my password" option.</p>
+<p>Once you've set a new password, you can use it to commit changes in VS Code.</p>
+<p><img src="data/image.png" width="1089" height="620"></p></div><a href="#toc">&uarr; Anfang</a><div class="book_chapter"><a name="ch8759"></a><h2>11. GIT Ignore</h2><p data-pm-slice="1 1 []">Die Datei <code dir="ltr">.gitignore</code> legt fest, welche Dateien und Ordner Git ignorieren soll, damit sie nicht versehentlich ins Repository aufgenommen werden.</p>
+<p>Zum Beispiel enthält der Ordner <code dir="ltr">.venv</code> deine lokale Python-Umgebung. Erstelle im Hauptverzeichnis deines Repositorys eine Datei namens <code dir="ltr">.gitignore</code> und füge diese Zeile hinzu:</p>
+<p>Die virtuelle Umgebung <code dir="ltr">.venv</code> sollte nicht synchronisiert werden, da sie systemabhängig ist (Mac, Windows Linux...), viel Speicherplatz benötigt und sich aus einer Abhängigkeitsdatei jederzeit neu erstellen lässt.</p>
+<pre data-pm-slice="1 1 []"><code class="language-gitignore">.venv/</code><br><br><br><br><img class="img-fluid" src="data/image.png"><br>Resultat: kein .venv in den getrackten files<br>gitignore kann synchronisiert werden<br><img class="img-fluid" src="data/image%20%282%29.png"></pre></div><a href="#toc">&uarr; Anfang</a>
+</body>
+</html>
